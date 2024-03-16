@@ -9,7 +9,7 @@ module.exports = {
     once: true,
     async execute(client) {
         logLoad('client', `${client.user.username} est prêt: 🪡🆗`, true)
-
+        logLoad("db", "Aucune db connecter 📛📛")
 
 
 
