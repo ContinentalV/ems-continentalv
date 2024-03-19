@@ -4,18 +4,20 @@
   "description": "bot ems configurable",
   "main": "main.js",
   "scripts": {
+    "bot": "nodemon ./main.js",
+    "deploy": "node ./deploy-commands.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Neogetsu/CN5-EMS.git"
   },
-  "author": "Neo-getsu",
+  "author": "Produclem",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Neogetsu/CN5-EMS/issues"
+    "url": "https://github.com/ContinentalV/ems-continentalv"
   },
-  "homepage": "https://github.com/Neogetsu/CN5-EMS#readme",
+  "homepage": "https://github.com/ContinentalV/ems-continentalv",
   "dependencies": {
     "@napi-rs/canvas": "^0.1.41",
     "axios": "^1.4.0",
