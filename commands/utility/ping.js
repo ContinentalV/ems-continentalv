@@ -6,7 +6,7 @@ const fs = require('fs');
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('ping')
-    .setDescription('Envoie les information général de continental V.'),
+    .setDescription('Envoie les informations générales de continental V.'),
   async execute(interaction) {
 
   }
