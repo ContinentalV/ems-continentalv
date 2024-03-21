@@ -26,7 +26,7 @@ module.exports = (client) => {
         logLoad('command', command.data.name, true);
 
       } else {
-        console.log((`{Commands}-[ERROR]:: La commande: ${command.data.name} \n path: ${filePath} \n state: n'a pas pu être charger.(require data or execute)`));
+        console.log((`{Commands}-[ERROR]:: La commande: ${command.data.name} \n path: ${filePath} \n state: n'a pas pu être chargée.(require data or execute)`));
       }
     }
   }
