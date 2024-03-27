@@ -13,14 +13,11 @@ module.exports = {
             } else {
                 const nameCommand = interaction.client.commands.get('name');
 
-                // Vérifie si la commande /name existe
                 if (nameCommand) {
-                    // Exécute la commande /name
                     await nameCommand.execute(interaction);
                 } else {
-                    await interaction.reply("La commande /name n'existe pas.");
+                    await interaction.reply("Je t'invite à faire la commande **/name** pour définir ton nom et prénom RP.");
                 }
-                // await interaction.reply("Je t'invite à faire la commande **/name** pour définir ton nom et prénom RP.");
             }
         } catch (error) {
             console.error("Une erreur s'est produite :", error);
