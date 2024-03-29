@@ -3,7 +3,8 @@ module.exports = {
     "fivem": "https://servers-frontend.fivem.net/api/servers/single/eazypm",
   },
 
-  channel: {
+  listChannels: {
+    entretiens: "1150618593860517948",
   },
 
   Roles: {

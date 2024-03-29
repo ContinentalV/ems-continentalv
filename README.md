@@ -5,7 +5,7 @@
 
 ## __EMS Employés__
 - **`/pds`** : Prise de service + comptage heures
-- **`/fds xx`** : Fin de service + ajout de 20 réas + ajout delta PDS/FDS heures
+- **`/fds`** : Fin de service + ajout de toutes les réas faites en comptant tous les CR
 - **`/ems`** : Pour avoir une liste de tous les EMS actuellement en service avec leur noms et leur grades et un badge pour savoir s'ils peuvent réas par balle ou pas
 - **`/patient`** : Commande pour créer un dossier patient qui va direct en bdd avec le nom prénom de la personne, comment il est mort, et ID card
 - **`/absence`** : Commande pour créer une absence qui met un role absent direct et qui bloque la pds si absent sauf s'il arrete son absence. et met un embed en disant qu'il est absent.
