@@ -84,6 +84,25 @@ module.exports = {
             embed.setFooter({text: `Dossier par ${interaction.member.nickname}`, iconURL: interaction.user.displayAvatarURL()})
                  .setTimestamp();
 
-        await interaction.reply({ embeds: [embed] });
+        const crPatient = listChannels.cr_patient;
+        const channel = interaction.client.channels.cache.get(crPatient);
+        if (channel) {
+            const sentMessage = await channel.send({ embeds: [embed] });
+
+            const messageLink = `https://discord.com/channels/${sentMessage.guild.id}/${channel.id}/${sentMessage.id}`;
+            await interaction.reply({
+                content: `Vous avez réanimé ${prénom} ${nom}.\n[🔗 **Compte rendu de la réa**](${messageLink})`,
+                ephemeral: true
+            });
+            setTimeout(async () => {
+                await interaction.deleteReply();
+            }, 7000);
+        } else {
+            console.error(`Impossible de trouver le canal avec l'ID ${channel}`);
+            await interaction.reply({
+                content: `ERROR : Impossible de trouver le canal avec l'ID ${channel}`,
+                ephemeral: true
+            });
+        }
     }
 }
