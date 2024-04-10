@@ -8,7 +8,8 @@ module.exports = {
     cr_patient:"1122908450733686936"
   },
 
-  Roles: {
+  roles: {
+    "EmergencyRole": "1113289021481828372",
 
   }
 

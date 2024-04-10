@@ -60,6 +60,8 @@ module.exports = {
         const causes = interaction.options.getString('causes');
         const chirurgie = interaction.options.getString('chirurgie');
 
+        // TODO : Enregistrer en base de données les informations du patient
+
         const embed = new EmbedBuilder()
             .setTitle('Dossier patient')
             .setDescription(`Dossier du patient **${prénom} ${nom}**`)
