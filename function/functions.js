@@ -23,4 +23,18 @@ async function fetchPlayerNames() {
     }
 }
 
-module.exports = { fetchPlayerNames };
+function extraireNomApresTiret(nickname) {
+    const regex = /\[.*?\] - (.*)/;
+    const match = regex.exec(nickname);
+    if (match && match.length > 1) {
+        return match[1];
+    } else {
+        return null;
+    }
+}
+function verifierFormatDate(date) {
+    const regexDate = /^\d{2}\/\d{2}\/\d{4}$/;
+    return regexDate.test(date);
+}
+
+module.exports = { fetchPlayerNames, extraireNomApresTiret, verifierFormatDate};

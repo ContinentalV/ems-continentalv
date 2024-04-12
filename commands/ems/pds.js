@@ -11,6 +11,7 @@ module.exports = {
         const hasRole = member.roles.cache.has(roleId);
 
         // TODO : Vérifier que l'utilisateur n'est pas en service
+        // TODO : Vérifier que l'utilisateur n'a pas une absence en cours
         if (!hasRole) {
             await interaction.reply("Tu n'es pas EMS, tu ne peux pas prendre ton service !");
             return;
