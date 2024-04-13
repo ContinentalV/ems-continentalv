@@ -46,7 +46,7 @@ module.exports = {
         )
         .addAttachmentOption(option =>
             option.setName('image')
-                .setDescription('Ajouter une image en pièce jointe')
+                .setDescription('Ajoutez la carte d\'identité du patient')
                 .setRequired(true)
         )
         .addUserOption(option =>

@@ -29,7 +29,7 @@ module.exports = {
         const minutesFDS = ("0" + dateFDS.getMinutes()).slice(-2);
         const secondesFDS = ("0" + dateFDS.getSeconds()).slice(-2);
 
-        const texteFDS = `${jourFDS}-${moisFDS}-${anneeFDS} - ${heuresFDS}:${minutesFDS}:${secondesFDS}`;
+        const texteFDS = `${jourFDS}/${moisFDS}/${anneeFDS} - ${heuresFDS}:${minutesFDS}:${secondesFDS}`;
 
         let dureeServiceMillis  = timestampFDS - timestampPDS;
         const heuresService = Math.floor(dureeServiceMillis / (1000 * 60 * 60));
@@ -55,7 +55,7 @@ module.exports = {
             //     '     └───────────────┘\n' +
             //     '```')
             .setDescription('```ml\n' +
-                'PDS: 10-04-2024 - 17:00:00\n' +
+                'PDS: 10/04/2024 - 17:00:00\n' +
                 `FDS: ${texteFDS}` + '```')
             .addFields({ name: "Durée service", value: "```"+heuresService+"h"+minutesService+"```", inline: true },
                 { name: "Nombre réas", value: "```"+nombreReas+"```", inline: true},
