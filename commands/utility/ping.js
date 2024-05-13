@@ -8,6 +8,6 @@ module.exports = {
     .setName('ping')
     .setDescription('Envoie les informations générales de continental V.'),
   async execute(interaction) {
-
+    await interaction.reply({ content: 'Pong !', ephemeral: true });
   }
 }

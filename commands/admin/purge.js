@@ -12,7 +12,7 @@ module.exports = {
     async execute(interaction) {
         const nbMessages = interaction.options.getInteger('nombre');
 
-        const roleId = '838120186585940010'; // ID de la direction
+        const roleId = '1113549228275421244'; // ID de la direction
         const hasRequiredRole = interaction.member.roles.cache.has(roleId);
 
         if (!hasRequiredRole) {
