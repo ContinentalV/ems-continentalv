@@ -91,18 +91,9 @@ module.exports = {
                 }
             }
 
-            // Pour le /cv
-            if (interaction.customId === 'cvModal') {
-                const ageHRP = interaction.fields.getField('ageHRP').value;
-                const persoRP = interaction.fields.getField('persoRP').value;
-                const dispos = interaction.fields.getField('dispos').value;
-                const member = interaction.member;
-
-                await interaction.reply({ content: `Le candidat ${member.user.tag} a déclaré avoir **${ageHRP} ans**.
-**Personnage RP :** 
-${persoRP}
-**Disponibilités :**
-${dispos}`, ephemeral: false });
+            if (interaction.customId === 'cv') {
+                interaction.name = interaction.fields.getField('name').value;
+                console.log(interaction.name)
             }
 
         }
